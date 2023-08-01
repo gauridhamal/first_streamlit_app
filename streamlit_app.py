@@ -2,7 +2,7 @@
 import streamlit
 import pandas 
 import requests
-
+import snowflake.connector
 
 streamlit.title('The Streamlit Practice')
 streamlit.header('Breakfast Menu')
@@ -29,6 +29,6 @@ fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "Kiwi")
 
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 
-import snowflake.connector
+
 
 streamlit.dataframe(fruityvice_normalized)
