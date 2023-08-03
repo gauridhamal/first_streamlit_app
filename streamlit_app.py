@@ -39,7 +39,7 @@ except URLError as e:
   stremlit.error()
   
 
-streamlit.stop()
+
 
 
  
